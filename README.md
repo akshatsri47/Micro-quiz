@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# QuizCraft
 
-## Getting Started
+A modern, server-rendered quiz platform built with Next.js App Router. QuizCraft lets you browse quiz categories, take time-limited quizzes with instant feedback, and view your final score.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Dynamic Routing & SSR**  
+  Category pages (`/quizzes/[category]`) and quiz pages (`/quiz/[id]`) are rendered on the server for SEO and performance.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **API-First Data**  
+  All quiz data is exposed via Next.js API routes (`/api/quizzes/[category]`, `/api/quiz/[id]`).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Interactive Client Experience**  
+  Client-side React state handles question navigation, answer selection, timer countdown, and immediate feedback.
 
-## Learn More
+- **Dynamic Metadata**  
+  Per-category SEO tags are generated with `generateMetadata()` in the App Router.
 
-To learn more about Next.js, take a look at the following resources:
+- **Responsive & Animated UI**  
+  Built with Tailwind CSS and Lucide icons for a clean, animated design.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠️ Tech Stack
 
-## Deploy on Vercel
+- **Next.js 13 App Router** (Server & Client Components)  
+- **TypeScript** for type safety  
+- **React** for UI & state management  
+- **Tailwind CSS** for utility-first styling  
+- **Lucide React** for lightweight SVG icons  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🎨 Design & Development Approach
+
+1. **AI-Assisted Design & Boilerplate**  
+   - Generated an initial Tailwind + Next.js UI mockup via AI prompts.  
+   - Used that boilerplate to scaffold core components and styles.
+
+2. **Custom Integration & Logic**  
+   - Hand-crafted SSR data-fetching in App Router, wired up API routes under `/api`.  
+   - Built dynamic SEO metadata and animated backgrounds by hand.  
+   - Implemented client-side quiz state management (timer, question flow, feedback).
+
+3. **Iterative Refinement**  
+   - Polished UX animations, color schemes, and responsive layouts.  
+   - Ensured accessibility, mobile optimization, and robust error handling.
+
+> _All integration, data-flow wiring, and interactivity logic was developed manually—AI only provided the initial visual and structural boilerplate._
+
+
+
+
